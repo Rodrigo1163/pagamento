@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagamento.css">
+    <title>Pagamento</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <p>logo</p>
+            <h2>- Pagamento</h2>
+        </div>
+        <div class="logo">
+            <img src="/icones/icons8-convidado-masculino-94.png" alt="icone" class="iconeUser">
+        </div>
+
+    </header>
+    <div class="formaDePagamento">
+        <input type="checkbox" id="checkboxDinheiro">
+        <input type="checkbox" id="checkboxPix">
+        <input type="checkbox" id="checkboxBoleto">
+        <input type="checkbox" id="checkboxCartao">
+
+        <label class="box dinheiro" for="checkboxDinheiro">
+            <img src="/icones/icons8-dinheiro-48.png" alt="">
+            <p>Dinheiro</p>
+        </label>
+
+        <label class="box pix" for="checkboxPix">
+            <img src="/icones/icons8-foto-48.png" alt="">
+            <p>Pix</p>
+        </label>
+
+        <label class="box boleto" for="checkboxBoleto">
+            <img src="/icones/icons8-boleto-48.png" alt="">
+            <p>boleto</p>
+        </label>
+        <label class="box cartao" for="checkboxCartao">
+            <img src="/icones/cartao-de-debito.png" alt="">
+            <p>Cartão de Crédito</p>
+        </label>
+    </div>
+    <div class="inputValores">
+        <div class="inputs">
+            <div class="planoDePagamento">
+                <label for="">Plano de Pagamento</label>
+                <select class="inputPlanoDePagamento" name="escolhaOpcao">
+                    <option value="opcao1">1032</option>
+                    <option value="opcao2">1111</option>
+                    <option value="opcao3">2222</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select>
+            </div>
+            <div class="valor">
+                <label for="">
+                    Valor(R$)
+                </label>
+                <input type="text" placeholder="R$ 108,00" class="inputValor">
+            </div>
+        </div>
+        <div class="adicionar">
+            <p>p</p>
+            <button class="buttonAdicionar">Adicionar</button>
+        </div>
+
+    </div>
+    <div class="mensagem">
+        <img src="/icones/icons8-barato-2-80.png" alt="">
+        <p>É hora do pagamento...</p>
+        <p>Você deve selecionar uma ou mais formas de pagamento para finalizarmos</p>
+    </div>
+    <div class="resultadoValor">
+        <div class="resultado restante">
+            <p>restante</p>
+            <span>R$ 0,00</span>
+
+        </div>
+        <div class="resultado troco">
+            <p>Troco</p>
+            <span>R$ 0,00</span>
+        </div>
+        <div class="resultado total">
+            <p>Total</p>
+            <span>R$ 0,00</span>
+        </div>
+    </div>
+    <div class="acao">
+        <button class="btn-voltar">Voltar</button>
+        <div class="botoesDeAcoes">
+            <button class="btn btn-cancelar">Cancelar</button>
+            <button class="btn btn-detalhes">Detalhes</button>
+            <button class="btn btn-finalizar">Finalizar</button>
+        </div>
+    </div>
+</body>
+
+</html>
