@@ -1,0 +1,499 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid rgb(189, 187, 187);
+    padding: 10px;
+
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header p {
+    width: 7em;
+    height: 3em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.iconeUser {
+    width: 50px;
+}
+
+.formaDePagamento {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+    border-bottom: 1px solid rgb(189, 187, 187);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 18px;
+    width: 6em;
+    height: 7em;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    transition: 0.5s;
+
+
+}
+
+.box:hover {
+    cursor: pointer;
+    background-color: gray;
+    border: none;
+
+}
+
+.cartao img {
+    width: 85%;
+}
+
+/* dinheiro */
+#checkboxDinheiro:checked~.dinheiro {
+    border: none;
+    background-color: rgb(151, 18, 147);
+}
+
+#checkboxDinheiro:checked~.pix {
+    border: none;
+    background-color: rgb(138, 138, 138);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#checkboxDinheiro:checked~.boleto {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#checkboxDinheiro:checked~.cartao {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* pix */
+#checkboxPix:checked~.pix {
+    border: none;
+    background-color: rgb(151, 18, 147);
+
+}
+
+#checkboxPix:checked~.dinheiro {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+#checkboxPix:checked~.boleto {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+#checkboxPix:checked~.cartao {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+/* boleto */
+
+#checkboxBoleto:checked~.boleto {
+    border: none;
+    background-color: rgb(151, 18, 147);
+}
+
+#checkboxBoleto:checked~.pix {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+#checkboxBoleto:checked~.dinheiro {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+#checkboxBoleto:checked~.cartao {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+
+
+/* cartão */
+#checkboxCartao:checked~.cartao {
+    border: none;
+    background-color: rgb(151, 18, 147);
+}
+
+#checkboxCartao:checked~.pix {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+#checkboxCartao:checked~.dinheiro {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+#checkboxCartao:checked~.boleto {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+
+#checkboxDinheiro,
+#checkboxPix,
+#checkboxBoleto,
+#checkboxCartao {
+    display: none;
+}
+
+.icone {
+    width: 90%;
+    height: 85%;
+    background-color: black;
+}
+
+.inputs {
+    display: flex;
+}
+
+.inputValores {
+    display: flex;
+    margin: 12px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.planoDePagamento,
+.valor {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputPlanoDePagamento {
+    width: 55vw;
+    height: 3em;
+    padding-left: 20px;
+    outline: none;
+}
+
+
+.valor {
+    margin-left: 12px;
+}
+
+.inputValor {
+    width: 48vh;
+    height: 3em;
+    padding-right: 20px;
+    text-align: end;
+    outline: none;
+}
+
+.adicionar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.buttonAdicionar:hover {
+    background-color: rgb(64, 40, 87);
+    cursor: pointer;
+}
+
+.adicionar p {
+    color: white;
+}
+
+.buttonAdicionar {
+    background-color: blueviolet;
+    border-radius: 4px;
+    height: 3em;
+    width: 30vh;
+    border: none;
+    transition: 0.5s;
+    color: white;
+}
+
+.mensagem {
+    flex-direction: column;
+    text-align: center;
+    gap: 1px;
+    line-height: 25px;
+    margin: 0 auto;
+    width: 70%;
+
+
+}
+
+
+.resultadoValor {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 98%;
+    bottom: 10%;
+    margin: 12px;
+    padding: 12px;
+    border-top: 1px solid rgb(189, 187, 187);
+    border-bottom: 1px solid rgb(189, 187, 187);
+
+}
+
+.resultado {
+    font-weight: 700;
+}
+
+.acao {
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    position: fixed;
+    bottom: 0;
+    margin: 10px;
+    margin-left: 50px;
+
+
+
+}
+
+.btn-voltar {
+    border: none;
+    background: white;
+    color: rgb(141, 141, 141);
+    font-size: 18px;
+    border: 1px solid rgb(189, 187, 187);
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.btn-voltar:hover {
+    cursor: pointer;
+    background-color: rgb(189, 187, 187);
+    color: white;
+    border: none;
+}
+
+.btn-cancelar {
+    padding: 12px;
+    font-size: 18px;
+    background-color: white;
+    color: rgb(255, 67, 67);
+    border: 1px solid rgb(255, 67, 67);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+.btn-detalhes {
+    padding: 12px;
+    font-size: 18px;
+    background-color: white;
+    color: rgb(165, 89, 165);
+    border: 1px solid rgb(165, 89, 165);
+    transition: 0.4s;
+}
+
+.btn-detalhes:hover {
+    cursor: pointer;
+    background-color: rgb(245, 218, 218);
+}
+
+.btn-finalizar {
+    border: none;
+    width: 250px;
+    padding: 13px 0 13px 0;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(181, 125, 233);
+    transition: 0.4s;
+}
+
+.btn-finalizar:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+@media(min-width: 415px) {
+    .btn-cancelar:hover {
+        background-color: rgb(245, 218, 218);
+    }
+}
+
+@media (max-width: 1024px) {
+    header p {
+        width: 5em;
+        height: 2em;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .iconeUser {
+        width: 40px;
+    }
+
+    .inputValores {
+        flex-direction: column;
+    }
+
+    .inputs {
+        flex-direction: row;
+    }
+
+    .inputPlanoDePagamento {
+        margin-top: 10px;
+        width: 185px;
+    }
+
+    .inputValor {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .buttonAdicionar {
+        width: 387px;
+    }
+
+    .resultadoValor {
+        width: 94%;
+        bottom: 8%;
+    }
+
+    .acao {
+        margin-left: 30px
+    }
+
+    .btn-detalhes,
+    .btn-voltar {
+        display: none;
+    }
+
+    .btn-cancelar:active {
+        background-color: rgb(245, 218, 218);
+        user-select: none;
+        outline: none;
+    }
+}
+
+@media (max-width: 414px) {
+    header p {
+        width: 5em;
+        height: 2em;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .iconeUser {
+        width: 40px;
+    }
+
+    .inputValores {
+        flex-direction: column;
+    }
+
+    .inputs {
+        flex-direction: row;
+    }
+
+    .inputPlanoDePagamento {
+        margin-top: 10px;
+        width: 185px;
+    }
+
+    .inputValor {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .buttonAdicionar {
+        width: 387px;
+    }
+
+    .resultadoValor {
+        width: 94%;
+        bottom: 8%;
+    }
+
+    .acao {
+        margin-left: 30px
+    }
+
+    .btn-detalhes,
+    .btn-voltar {
+        display: none;
+    }
+
+    .btn-cancelar:active {
+        background-color: rgb(245, 218, 218);
+        user-select: none;
+        outline: none;
+    }
+}
