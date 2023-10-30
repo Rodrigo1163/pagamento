@@ -401,7 +401,9 @@ header p {
     .inputValores {
         flex-direction: column;
     }
-
+    .buttonAdicionar{
+         margin-top: 20px;
+    }
     .inputs {
         flex-direction: row;
     }
@@ -462,6 +464,9 @@ header p {
     }
     .iconeUser {
         width: 40px;
+    }
+    .buttonAdicionar{
+         margin-top: 20px;
     }
 
     .inputValores {
