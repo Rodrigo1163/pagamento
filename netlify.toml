@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "pagamente.html"
+status = 200
